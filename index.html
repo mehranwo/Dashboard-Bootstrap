@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./EX1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>EX1</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top light-mode-bg d-lg-none light-mode-text">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span><i class="fas fa-bars light-mode-text"></i></span>
+        </button>
+        <div class="logo"><i class="fas fa-bezier-curve"></i>Bezier</div>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header light-mode-bg2">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <div class="admin d-flex">
+                <div class="d-flex justify-content-center align-items-center avatar-border">
+                  <img
+                    class="avatar-main"
+                    src="./images/admin.gif"
+                    alt="a picture from mehran balad"
+                  />
+                </div>
+                <div class="ashen-text">
+                  SAMURAI
+                  <div class="role">Admin</div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="btn position-relative notification"
+                  >
+                    <i class="far fa-bell"></i>
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    >
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </h5>
+            <button
+              type="button"
+              class="btn-close "
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body light-mode-bg autoHide-menu">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <div class="light-mode-text">
+                  <ul class="nav flex-column nav-1">
+
+                    <li class="nav-item">
+                    <div class="light-mode-switch autoHide-menu-switch">
+                      <button class="light-mode-text">
+                        <div><i class="fas fa-sun"></i><div><i class="fas fa-moon d-none"></i></div>
+                      </button>
+                    </div>
+                    </li>
+
+                    <li class="nav-item">
+                      <div class="autoHide-menu-opt ">
+                        <i class="fas fa-th-large"></i><span>Dashboard</span> 
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <div class="autoHide-menu-opt">
+                        <i class="fas fa-user-alt"></i>Artists
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <div class="autoHide-menu-opt">
+                        <i class="far fa-image"></i>Projects
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <div class="autoHide-menu-opt">
+                        <i class="fas fa-ticket-alt"></i>Sales
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <div class="autoHide-menu-opt">
+                        <i class="fas fa-cog"></i>Settings
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <div class="autoHide-menu-logout autoHide-menu-opt">
+                        <i class="fas fa-sign-out-alt"></i>Logout
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="d-flex flex-lg-row mt-5 mt-lg-0 flex-column light-mode-text">
+      <div
+        class="side-bar col-2 d-none d-lg-flex flex-column justify-content-around align-items-center  light-mode-text light-mode-bg"
+      >
+        <div class="side-bar-logo">
+          <i class="fas fa-bezier-curve"></i>Bezier
+        </div>
+
+        <div class="side-bar-sec1 d-flex flex-column align-items-left">
+          <div class="light-mode-switch mb-5">
+            <button class="light-mode-text">
+              <div><i class="fas fa-sun s-1"></i><div><i class="fas fa-moon d-none s-2"></i></div>
+            </button>
+          </div>
+
+          <div class="menu-opt">
+            <div><i class="fas fa-th-large"></i>Dashboard</div>
+          </div>
+          <div class="menu-opt">
+            <div><i class="fas fa-user-alt"></i>Artists</div>
+          </div>
+          <div class="menu-opt">
+            <div><i class="far fa-image"></i>Projects</div>
+          </div>
+          <div class="menu-opt">
+            <div><i class="fas fa-ticket-alt"></i>Sales</div>
+          </div>
+          <div class="mt-5">
+            <div class="menu-opt">
+              <div><i class="fas fa-cog"></i>Settings</div>
+            </div>
+            <div class="menu-logout menu-opt">
+              <i class="fas fa-sign-out-alt"></i>Logout
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div
+        class="light-mode-bg2 col-lg-7 pb-5 mt-5 mt-lg-0 pb-lg-0 d-flex flex-column justify-content-center align-items-center article"
+      >
+        <div class="search-field-main mb-5  col-11">
+          <form role="search">
+            <i class="fas fa-search"></i>
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="         Search Artists, Projects"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+        <div class="col-lg-11  mt-3 mt-lg-0 light-mode-text mb-4">
+          <h4>In The Last 3 days,</h4>
+        </div>
+        <div
+          class="cards col-12 mb-4 d-flex flex-column flex-md-row justify-content-around align-items-center light-mode-text"
+        >
+          <div class="art-card container d-flex-column justify-content-between">
+            <h2>30,000</h2>
+            <div>Art Sales</div>
+          </div>
+          <div class="art-card container d-flex-column justify-content-center">
+            <h2>250</h2>
+            <div>New Artists</div>
+          </div>
+          <div class="art-card container d-flex-column justify-content-center">
+            <h2>$400,000</h2>
+            <div>Revenue Generated</div>
+          </div>
+        </div>
+        <div class="d-flex mb-3 col-11 flex-column flex-md-row justify-content-between light-mode-text">
+          <div class="ashen-text">
+            <div>All Artists</div>
+            <div class="role">Monitor Artists Sales, Reviews, etc.</div>
+          </div>
+          <div class="search-field">
+            <form class="d-flex" role="search">
+              <i class="fas fa-search"></i>
+              <input
+                class="form-control me-3"
+                type="search"
+                placeholder="     Search Artists"
+                aria-label="Search"
+              />
+              <button type="button" class="btn btn-outline-secondary">
+                <div class="d-flex"><i class="fas fa-filter"></i>Filter</div>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-11">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators d-flex align-items-center justify-content-center">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active page light-mode-text"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                class="page light-mode-text"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                class="page light-mode-text"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <table class="table table-hover table-rounded light-mode-text">
+                  <thead>
+                    <tr>
+                      <th scope="col">Artists</th>
+                      <th scope="col">Statues</th>
+                      <th scope="col">Ratings</th>
+                      <th class="d-none d-lg-table-cell"></th>
+                      <th class="d-none d-lg-table-cell" scope="col">Projects sold</th>
+                      <th class="d-none d-lg-table-cell" scope="col">Highest Sale</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-1.jpg"
+                          alt=""
+                        />
+                        Ash Lee
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-75"
+                            role="progressbar"
+                            aria-valuenow="75"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >40% <span class="upgrade">&#8593; 4%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">400</td>
+                      <td class="d-none d-lg-table-cell">$400,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-2.jpg"
+                          alt=""
+                        />
+                        Morgan Driver
+                      </th>
+                      <td>
+                        <div class="Pending">Pending</div>
+                      </td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-25"
+                            role="progressbar"
+                            aria-valuenow="25"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >20% <span class="downgrade">&#8595; 14%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">200</td>
+                      <td class="d-none d-lg-table-cell">$120,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-3.jpg"
+                          alt=""
+                        />
+                        Clare Knight
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-100"
+                            role="progressbar"
+                            aria-valuenow="100"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >30% <span class="upgrade">&#8593; 90%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">600,000</td>
+                      <td class="d-none d-lg-table-cell">$120,000,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-4.jpg"
+                          alt=""
+                        />
+                        Ahmad Saint
+                      </th>
+                      <td>Unverified</td>
+                      <td>No Ratings Available</td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >0% <span class="downgrade">&#8593;&#8595; 0%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">0</td>
+                      <td class="d-none d-lg-table-cell">$0</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-5.jpg"
+                          alt=""
+                        />
+                        Edward Stoner
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-75"
+                            role="progressbar"
+                            aria-valuenow="75"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >40% <span class="upgrade">&#8593; 4%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">500</td>
+                      <td class="d-none d-lg-table-cell">$500,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-6.jpg"
+                          alt=""
+                        />
+                        Emily Carter
+                      </th>
+                      <td><div class="Pending">Pending</div></td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-50"
+                            role="progressbar"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >20% <span class="downgrade">&#8595; 14%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">280</td>
+                      <td class="d-none d-lg-table-cell">$280,000</td>
+                    </tr>
+                  </tbody>
+                </table>  
+              </div>
+              <div class="carousel-item">
+                <table class="table table-hover table-rounded light-mode-text">
+                  <thead>
+                    <tr>
+                      <th scope="col">Artists</th>
+                      <th scope="col">Statues</th>
+                      <th scope="col">Ratings</th>
+                      <th class="d-none d-lg-table-cell"></th>
+                      <th class="d-none d-lg-table-cell" scope="col">Projects sold</th>
+                      <th class="d-none d-lg-table-cell" scope="col">Highest Sale</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-7.png"
+                          alt=""
+                        />
+                        Emma Stone
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-75"
+                            role="progressbar"
+                            aria-valuenow="75"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >40% <span class="upgrade">&#8593; 4%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">400</td>
+                      <td class="d-none d-lg-table-cell">$400,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-8.png"
+                          alt=""
+                        />
+                        Ryan Green
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-100"
+                            role="progressbar"
+                            aria-valuenow="100"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >30% <span class="upgrade">&#8593; 90%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">600,000</td>
+                      <td class="d-none d-lg-table-cell">$120,000,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-9.png"
+                          alt=""
+                        />
+                        Anonymous
+                      </th>
+                      <td>
+                        <div class="Pending">Pending</div>
+                      </td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-25"
+                            role="progressbar"
+                            aria-valuenow="25"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >20% <span class="downgrade">&#8595; 14%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">200</td>
+                      <td class="d-none d-lg-table-cell">$120,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-10.png"
+                          alt=""
+                        />
+                        julia Wolf
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-75"
+                            role="progressbar"
+                            aria-valuenow="75"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >40% <span class="upgrade">&#8593; 4%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">500</td>
+                      <td class="d-none d-lg-table-cell">$500,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-9.png"
+                          alt=""
+                        />
+                        Anonymous
+                      </th>
+                      <td>Unverified</td>
+                      <td>No Ratings Available</td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >0% <span class="downgrade">&#8593;&#8595; 0%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">0</td>
+                      <td class="d-none d-lg-table-cell">$0</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-11.jpeg"
+                          alt=""
+                        />
+                        Ali Habibi
+                      </th>
+                      <td><div class="Pending">Pending</div></td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-50"
+                            role="progressbar"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >20% <span class="downgrade">&#8595; 14%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">280</td>
+                      <td class="d-none d-lg-table-cell">$280,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="carousel-item">
+                <table class="table table-hover table-rounded light-mode-text">
+                  <thead>
+                    <tr>
+                      <th scope="col">Artists</th>
+                      <th scope="col">Statues</th>
+                      <th scope="col">Ratings</th>
+                      <th class="d-none d-lg-table-cell"></th>
+                      <th class="d-none d-lg-table-cell" scope="col">Projects sold</th>
+                      <th class="d-none d-lg-table-cell" scope="col">Highest Sale</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-9.png"
+                          alt=""
+                        />
+                        Anonymous
+                      </th>
+                      <td>Unverified</td>
+                      <td>No Ratings Available</td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >0% <span class="downgrade">&#8593;&#8595; 0%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">0</td>
+                      <td class="d-none d-lg-table-cell">$0</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-12.jpg"
+                          alt=""
+                        />
+                        Jason Adler 
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-75"
+                            role="progressbar"
+                            aria-valuenow="75"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >40% <span class="upgrade">&#8593; 4%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">400</td>
+                      <td class="d-none d-lg-table-cell">$400,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-9.png "
+                          alt=""
+                        />
+                        Anonymous
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-100"
+                            role="progressbar"
+                            aria-valuenow="100"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >30% <span class="upgrade">&#8593; 90%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">600,000</td>
+                      <td class="d-none d-lg-table-cell">$120,000,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-13.jfif"
+                          alt=""
+                        />
+                        David Smith
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-100"
+                            role="progressbar"
+                            aria-valuenow="100"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >30% <span class="upgrade">&#8593; 90%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">600,000</td>
+                      <td class="d-none d-lg-table-cell">$120,000,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-14.jpg"
+                          alt=""
+                        />
+                        Luigi Piper
+                      </th>
+                      <td>
+                        <div class="Verified">Verified</div>
+                      </td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-75"
+                            role="progressbar"
+                            aria-valuenow="75"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >40% <span class="upgrade">&#8593; 4%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">500</td>
+                      <td class="d-none d-lg-table-cell">$500,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img
+                          class="avatar"
+                          src="./images/customer-15.webp"
+                          alt=""
+                        />
+                        Green Mamba
+                      </th>
+                      <td><div class="Pending">Pending</div></td>
+                      <td>
+                        <div class="d-flex"></div>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-dark w-50"
+                            role="progressbar"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span
+                          >20% <span class="downgrade">&#8595; 14%</span>
+                        </span>
+                      </td>
+                      <td class="d-none d-lg-table-cell">280</td>
+                      <td class="d-none d-lg-table-cell">$280,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span class="arrow" aria-hidden="true"
+                ><i class="fas fa-angle-double-left fa-2x light-mode-text"></i
+              ></span>
+              <span class="light-mode-text">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >              <span class="light-mode-text">Next</span>
+              <span class="arrow" aria-hidden="true"
+                ><i class="fas fa-angle-double-right fa-2x light-mode-text"></i
+              ></span>
+
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-12 d-flex pt-lg-0 pb-5 pb-lg-0 mt-lg-0 flex-column justify-content-around align-items-center light-mode-bg2 light-mode-text"
+      >
+        <div class="admin d-lg-flex d-none">
+          <div class="d-flex justify-content-center align-items-center avatar-border">
+            <img
+              class="avatar-main"
+              src="./images/admin.gif"
+              alt="a picture from mehran balad"
+            />
+          </div>
+          <div class="ashen-text">
+            SAMURAI
+            <div class="role">Admin</div>
+          </div>
+          <div>
+            <button type="button" class="btn position-relative notification">
+              <i class="far fa-bell"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="d-flex flex-column flex-md-row flex-lg-column">
+          <div
+            class="banner d-flex flex-column text-center justify-content-center"
+          >
+            <h5>Best Selling Artists</h5>
+            <div class="scoreboard d-flex">
+              <div>
+                <img src="./images/customer-1.jpg" class="avatar" />
+              </div>
+              <div>Ash Lee</div>
+              <div class="role">40k+sales</div>
+              <div class="role">$1.40k revenue</div>
+            </div>
+            <div class="scoreboard d-flex">
+              <div>
+                <img src="./images/customer-5.jpg" class="avatar" />
+              </div>
+              <div>Edward Stoner</div>
+              <div class="role">40k+ sales</div>
+              <div class="role">$1k revenue</div>
+            </div>
+            <div class="scoreboard d-flex">
+              <div>
+                <img src="./images/customer-3.jpg" class="avatar" />
+              </div>
+              <div>Clare Knight</div>
+              <div class="role">30k+sales</div>
+              <div class="role">$2.40k revenue</div>
+            </div>
+            <button type="button" class="btn btn-success banner-btn">
+              View all Artists
+            </button>
+          </div>
+          <div
+            class="banner d-flex flex-column text-center justify-content-between"
+          >
+            <h5>Best Selling Projects</h5>
+            <div class="scoreboard d-flex">
+              <div>
+                <img src="./images/art1.jpg" class="avatar" />
+              </div>
+              <div>Foods</div>
+              <div class="role">40k+sales</div>
+              <div class="role">$1.40k revenue</div>
+            </div>
+            <div class="scoreboard d-flex">
+              <div>
+                <img src="./images/art2.jpg" class="avatar" />
+              </div>
+              <div>Sneakers</div>
+              <div class="role">40k+ sales</div>
+              <div class="role">$1k revenue</div>
+            </div>
+            <div class="scoreboard d-flex">
+              <div>
+                <img src="./images/art3.jpg" class="avatar" />
+              </div>
+              <div>Lighting</div>
+              <div class="role">30k+sales</div>
+              <div class="role">$2.40k revenue</div>
+            </div>
+            <button type="button" class="btn btn-success banner-btn">
+              View all Projects
+            </button>
+          </div>
+        </div>
+        <div class="clock mt-5 mt-lg-0 d-flex justify-content-center">
+          <span id="hour"></span><span>:</span><span id="mins"></span
+          ><span>:</span><span id="secs"></span>
+          <span id="date"></span>
+        </div>
+      </div>
+    </div>
+    <script src="/bootstrap/bootstrap.js"></script>
+    <script src="./EX1.js">
+    </script>
+  </body>
+</html>
